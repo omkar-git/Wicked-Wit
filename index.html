@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predict the Next Job</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <style>
+        body {
+            background-image: url("C:\Users\omkar\PycharmProjects\JobRec\back3.jpeg");
+            background-repeat: no-repeat;
+        }
+        
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .form {
+            margin: 0 auto;
+            width: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="login">
+        <h2 class="form">Predict your Next Job</h2>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" class="form" method="POST">
+            <label for="1">SSC Marks  </label><br>
+            <input type="text" name="1" id="1" placeholder="Experience" required="required" /> <br><br>
+            <label for="2">HSC Marks  </label><br>
+            <input type="text" name="2" id="2" placeholder="Test Score" required="required" /> <br><br>
+            <label for="3">SSC Marks  </label><br>
+            <input type="text" name="3" id="3" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="4" id="4" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="5" id="5" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="6" id="6" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="7" id="7" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="8" id="8" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="9" id="9" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="10" id="10" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="11" id="11" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="12" id="12" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="13" id="13" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="14" id="14" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="15" id="15" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="16" id="16" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="17" id="17" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="18" id="18" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="19" id="19" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="20" id="20" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="21" id="21" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="22" id="22" placeholder="Interview Score" required="required" /><br><br>
+            <input type="text" name="23" id="23" placeholder="Experience" required="required" /><br><br>
+            <input type="text" name="24" id="24" placeholder="Test Score" required="required" /><br><br>
+            <input type="text" name="25" id="25" placeholder="Interview Score" required="required" /><br><br><br>
+
+            <button type="submit" class="button">Predict</button>
+        </form>
+
+        <br>
+        <br> {{ prediction }}
+
+    </div>
+
+
+</body>
+
+</html>
